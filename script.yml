@@ -1,0 +1,13 @@
+
+---
+
+- hosts: localhost
+
+  tasks:
+    - name: print debug message
+      debug:
+        msg: "{{ 'demo' | encrypt_with_api }}"
+        
+    - name: print debug message
+      debug:
+        msg: "{{ 'demo' | encrypt_with_api('test-sault123') | decrypt_with_api('test-sault123') }}"
